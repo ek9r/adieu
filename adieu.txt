@@ -1,7 +1,7 @@
 Titel: Adieu, 2025
 Autor: Enrico Kalkbrenner
 Datum: 27.12.2025, 08:15
-Anker: https://ek9r.de#adieu
+Anker: outro.de -> ek9r.de#adieu
 
 ---
 
@@ -58,7 +58,7 @@ oder anderen offenen Bühnen.
 Ohnehin zählt nicht der Applaus,
 sondern das, was im Innern nachhallt.
 Wer konnte, fand mich stets in der Nische
-oder artverwandten Seilschaften. [^1]
+oder artverwandten Seilschaften.
 
 Dies hier ist die einzige wahre Markierung,
 dass ich da war. Soviel ist sicher,
@@ -71,16 +71,7 @@ Mglw. scho' immer?
 
 Adieu. ^^
 
----
-
 ENRICO KALKBRENNER | 95-25
-
-(adieu.txt)
-
-
-^1: t1s.ch, rockzoom.de, hacklabor.de, ...
-
-^x: 5|7 – zwanzig²: kalkig.de/freund
 
 ---
 
@@ -148,4 +139,6 @@ di.day/de
  – Digital Independence Day.
         Schritt für Schritt.
 
----
+
+
+git: https://raw.githubusercontent.com/ek9r/adieu/refs/heads/main/adieu.txt
