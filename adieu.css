@@ -1,4 +1,3 @@
-
       *, *::before, *::after {
         box-sizing: border-box;
       }
@@ -262,3 +261,104 @@
         }
       }
 
+      .nachschrift-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 0 2rem 5rem 2rem;
+        background: var(--bg-fade);
+      }
+
+      .nachschrift {
+        max-width: 540px;
+        width: 100%;
+        border-top: 1px solid var(--rule);
+        padding-top: 1.2rem;
+      }
+
+      .nachschrift summary {
+        cursor: pointer;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: var(--accent);
+        list-style: none;
+        user-select: none;
+        padding: 0.2em 0;
+        transition: color 0.3s ease;
+      }
+
+      .nachschrift summary::-webkit-details-marker { display: none; }
+
+      .nachschrift summary::before {
+        content: "> ";
+        opacity: 0.5;
+      }
+
+      .nachschrift[open] summary::before {
+        content: "v ";
+        opacity: 0.5;
+      }
+
+      .nachschrift summary:hover {
+        color: var(--text-adieu);
+      }
+
+      .nachschrift-body {
+        margin-top: 2rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem;
+        font-weight: 400;
+        line-height: 1.9;
+        color: var(--text-adieu);
+        opacity: 0;
+        transform: translateY(10px);
+        animation: nsIn 0.6s ease 0.05s forwards;
+      }
+
+      @keyframes nsIn {
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .nachschrift-body p {
+        margin: 0 0 1.1em 0;
+      }
+
+      .nachschrift-body p:last-child {
+        margin-bottom: 0;
+      }
+
+      .nachschrift-body .punch {
+        display: block;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 1.6em 0 0.4em 0;
+        line-height: 1.7;
+      }
+
+      .nachschrift-body .diday {
+        margin-top: 1.8em;
+        padding-left: 1.2em;
+        border-left: 2px solid var(--rule);
+        color: var(--text-adieu);
+      }
+
+      .nachschrift-body .diday a {
+        color: var(--text-adieu);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        transition: border-color 0.3s ease;
+      }
+
+      .nachschrift-body .diday a:hover {
+        border-color: var(--text-primary);
+      }
+
+      @media (max-width: 600px) {
+        .nachschrift-wrap {
+          padding: 0 1.5rem 4rem 1.5rem;
+        }
+        .nachschrift-body {
+          font-size: 0.78rem;
+        }
+      }
