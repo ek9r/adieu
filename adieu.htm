@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalkbrenner, Enrico</title>
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=source-serif-4:200,200i,300,300i,400,400i">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="adieu.css">
+
+    <style>
+      ul.daten    { margin: -1em 0 .25em 0; padding: 0; list-style: none; }
+      ul.daten li { font-weight: 400; }
+      ul.daten li::before { content: "– "; padding: 0 0 0 0.4em; }
+
+      .selbermachen,
+      .machenlassen { font-style: oblique; font-weight: 400; padding: 0 .4em; border-radius: 4px; display: block; }
+      .selbermachen { color: #5a9a6a; background: rgba(0, 140, 0, 0.08); }
+      .machenlassen { color: #b85454; background: rgba(220, 0, 0, 0.08); }
+      .diff         { margin: .2em 0.8em .2em -.4em; padding: .4em; border-radius: 8px; display: block; background: rgba(255, 255, 255, 0.25); font-weight: 200; }
+    </style>
+
+  </head>
+  <body>
+
+    <!-- Original -->
+    <section class="hero">
+      <div class="container">
+        <h1>Hallo,</h1>
+        <h2><span>ich bin</span> Enrico.</h2>
+      </div>
+      <div class="scroll-hint">
+        <span>Adieu, 2025</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Add-On: Adieu -->
+    <section class="adieu">
+      <div class="adieu-content">
+        <hr class="adieu-rule" id="adieu">
+        <div class="adieu-text">
+          <p>
+            Mehr als dreißig Jahre war ich hier – im globalen Netz,
+            in chaotischen Kreisen, auf Plattformen und eigenen Seiten.
+            Ich habe gebaut und abgerissen, geholfen und diskutiert.
+            Und ich habe geglaubt, dass das alles irgendwohin führt.
+          </p>
+          <p>
+            <em>Nur führt es nun nirgendwo mehr hin.</em>
+          </p>
+          <p>
+            Was einst ein freier Ort der Neugier und Weiterentwicklung war,
+            ist heute eine Maschinerie aus Aufmerksamkeitshandel, Empörungszyklen
+            und algorithmischer Beliebigkeit. Mutiert zu einem Kartell von Profilgeiern,
+            das nicht an unserem Wohl interessiert ist, sondern daran,
+            uns kontinuierlich zu messen und zu wiegen, bis die Rechenzentren platzen:
+          </p>
+          <ul class="daten">
+            <li> aus unserem Leben werden Daten,</li>
+            <li> aus den Daten wird Macht & Reichtum</li>
+            <li> und am Ende bleibt totale Kontrolle.</li>
+          </ul>
+          <p>
+            Und wer noch selbst denkt, wird Zeuge, wie
+            <span class='diff'>
+              <span class='selbermachen'> (&minus;) das befriedigende Selbermachen</span>
+              still und unbemerkt
+              <span class='machenlassen'> (&plus;) dem bequemen Machenlassen</span>
+            </span>
+            weicht. Nicht nur im Privaten – 
+            auch dort, wo früher Können, Erfahrung und Urteilskraft unverzichtbar waren.
+            Ein Tausch, der uns langsam abschafft.
+            Am Ende wissen wir kaum noch, was echt ist –
+            wir nicht, und andere Spezies erst recht nicht.
+            Alles sind Kopien, vielleicht sogar eine Simulation.
+            (R‑Evolution?)
+          </p>
+          <p>
+            <em>Dreißig Jahre sind genug.</em>
+          </p>
+          <p>
+            Der Technik bleibe ich erhalten – aber nicht
+            auf offener Bühne. Wer konnte, fand mich ohnehin stets
+            in der <a href="https://t1s.ch">Nische</a>.
+          </p>
+          <p>
+            Dies hier ist die einzige wahre Markierung, dass ich da war.
+            Soviel ist sicher, wenn auch sonst nichts sicher ist.
+          </p>
+          <p>
+          </p>
+          <p>
+            Taucht mein Name woanders auf,
+            bin das gewiss nicht ich,
+            sondern ein streunender Roboter.
+
+            <!-- Mschi': --> Mglw. scho' immer?
+
+            <span style="display: block; font-weight: 200;">~ Adieu. ^^</a>
+          </p>
+        </div>
+        <span class="adieu-year">Enrico Kalkbrenner | 95-25,</span>
+        <span class="adieu-txt">
+          <a href="/~enrico/adieu.txt" class="adieu-txt">adieu.txt</a>
+          <!--|
+          <a href="/~enrico/adieu.png" class="adieu-txt">adieu.png</a>-->
+        </span>
+      </div>
+    </section>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      document.querySelectorAll('.adieu-rule, .adieu-text, .adieu-year')
+        .forEach((el) => observer.observe(el));
+
+      // Deep-Link: bei #adieu sofort einblenden
+      if (window.location.hash === '#adieu') {
+        requestAnimationFrame(() => {
+          document.querySelectorAll('.adieu-rule, .adieu-text, .adieu-year')
+            .forEach((el) => el.classList.add('visible'));
+        });
+      }
+    </script>
+
+  </body>
+</html>
