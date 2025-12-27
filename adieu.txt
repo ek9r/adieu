@@ -15,15 +15,12 @@ dass das alles irgendwohin führt.
 
 Nur führt es nun nirgendwo mehr hin.
 
-Was einst ein freier Ort der
-Neugier und Weiterentwicklung war,
-ist heute eine Maschinerie aus dem Zirkus
-der Sichtbarkeit, Empörungszyklen
-und algorithmischer Beliebigkeit.
-Mutiert zu einem Kartell von Profilgeiern,
-das nicht an unserem Wohl interessiert ist,
-sondern daran, uns kontinuierlich
-zu messen und zu wiegen,
+Was einst ein freier Raum für Austausch
+und Entfaltung war, ist zu einem Zirkus
+aus Sichtbarkeitszwang, Empörungsökonomie
+und algorithmischer Willkür geworden.
+Mutiert zu einer Maschinerie
+die uns nicht begleitet, sondern verwertet,
 bis die Rechenzentren platzen:
 
  - aus unserem Leben werden Daten,
