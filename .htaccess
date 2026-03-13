@@ -1,2 +1,2 @@
 ErrorDocument  404 https://kalkbrenner.name/~enrico/
-DirectoryIndex adieu.htm
+DirectoryIndex index.html #adieu.htm
